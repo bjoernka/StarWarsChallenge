@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		19AE9DF62416038400CD43B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9DF52416038400CD43B0 /* AppDelegate.swift */; };
 		19AE9DF82416038400CD43B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9DF72416038400CD43B0 /* SceneDelegate.swift */; };
-		19AE9DFA2416038400CD43B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9DF92416038400CD43B0 /* ViewController.swift */; };
+		19AE9DFA2416038400CD43B0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9DF92416038400CD43B0 /* StartViewController.swift */; };
 		19AE9DFD2416038400CD43B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AE9DFB2416038400CD43B0 /* Main.storyboard */; };
 		19AE9DFF2416038800CD43B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19AE9DFE2416038800CD43B0 /* Assets.xcassets */; };
 		19AE9E022416038800CD43B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AE9E002416038800CD43B0 /* LaunchScreen.storyboard */; };
 		19AE9E0D2416038800CD43B0 /* StarWarsChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E0C2416038800CD43B0 /* StarWarsChallengeTests.swift */; };
 		19AE9E182416038800CD43B0 /* StarWarsChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E172416038800CD43B0 /* StarWarsChallengeUITests.swift */; };
+		19AE9E262416260B00CD43B0 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E252416260B00CD43B0 /* Film.swift */; };
+		19AE9E282416385600CD43B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E272416385600CD43B0 /* DetailViewController.swift */; };
+		19AE9E2A2416390500CD43B0 /* DetailTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E292416390500CD43B0 /* DetailTabController.swift */; };
+		19AE9E2C2416397700CD43B0 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E2B2416397700CD43B0 /* CharactersViewController.swift */; };
+		19AE9E2E24163C1700CD43B0 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E2D24163C1700CD43B0 /* Character.swift */; };
+		19AE9E312416431800CD43B0 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E2F2416431800CD43B0 /* DetailTableViewCell.swift */; };
+		19AE9E322416431800CD43B0 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19AE9E302416431800CD43B0 /* DetailTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +45,7 @@
 		19AE9DF22416038400CD43B0 /* StarWarsChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19AE9DF52416038400CD43B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19AE9DF72416038400CD43B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		19AE9DF92416038400CD43B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		19AE9DF92416038400CD43B0 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		19AE9DFC2416038400CD43B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19AE9DFE2416038800CD43B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19AE9E012416038800CD43B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		19AE9E132416038800CD43B0 /* StarWarsChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19AE9E172416038800CD43B0 /* StarWarsChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsChallengeUITests.swift; sourceTree = "<group>"; };
 		19AE9E192416038800CD43B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19AE9E252416260B00CD43B0 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		19AE9E272416385600CD43B0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		19AE9E292416390500CD43B0 /* DetailTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTabController.swift; sourceTree = "<group>"; };
+		19AE9E2B2416397700CD43B0 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		19AE9E2D24163C1700CD43B0 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		19AE9E2F2416431800CD43B0 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		19AE9E302416431800CD43B0 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +115,9 @@
 			children = (
 				19AE9DF52416038400CD43B0 /* AppDelegate.swift */,
 				19AE9DF72416038400CD43B0 /* SceneDelegate.swift */,
-				19AE9DF92416038400CD43B0 /* ViewController.swift */,
+				19AE9E3324164C8A00CD43B0 /* Models */,
+				19AE9E3524164CC600CD43B0 /* Views */,
+				19AE9E3424164CA600CD43B0 /* ViewControllers */,
 				19AE9DFB2416038400CD43B0 /* Main.storyboard */,
 				19AE9DFE2416038800CD43B0 /* Assets.xcassets */,
 				19AE9E002416038800CD43B0 /* LaunchScreen.storyboard */,
@@ -126,6 +142,35 @@
 				19AE9E192416038800CD43B0 /* Info.plist */,
 			);
 			path = StarWarsChallengeUITests;
+			sourceTree = "<group>";
+		};
+		19AE9E3324164C8A00CD43B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				19AE9E2D24163C1700CD43B0 /* Character.swift */,
+				19AE9E252416260B00CD43B0 /* Film.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		19AE9E3424164CA600CD43B0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				19AE9DF92416038400CD43B0 /* StartViewController.swift */,
+				19AE9E292416390500CD43B0 /* DetailTabController.swift */,
+				19AE9E272416385600CD43B0 /* DetailViewController.swift */,
+				19AE9E2B2416397700CD43B0 /* CharactersViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		19AE9E3524164CC600CD43B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19AE9E2F2416431800CD43B0 /* DetailTableViewCell.swift */,
+				19AE9E302416431800CD43B0 /* DetailTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +279,7 @@
 			files = (
 				19AE9E022416038800CD43B0 /* LaunchScreen.storyboard in Resources */,
 				19AE9DFF2416038800CD43B0 /* Assets.xcassets in Resources */,
+				19AE9E322416431800CD43B0 /* DetailTableViewCell.xib in Resources */,
 				19AE9DFD2416038400CD43B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19AE9DFA2416038400CD43B0 /* ViewController.swift in Sources */,
+				19AE9E312416431800CD43B0 /* DetailTableViewCell.swift in Sources */,
+				19AE9E2C2416397700CD43B0 /* CharactersViewController.swift in Sources */,
+				19AE9DFA2416038400CD43B0 /* StartViewController.swift in Sources */,
+				19AE9E262416260B00CD43B0 /* Film.swift in Sources */,
+				19AE9E282416385600CD43B0 /* DetailViewController.swift in Sources */,
 				19AE9DF62416038400CD43B0 /* AppDelegate.swift in Sources */,
+				19AE9E2A2416390500CD43B0 /* DetailTabController.swift in Sources */,
 				19AE9DF82416038400CD43B0 /* SceneDelegate.swift in Sources */,
+				19AE9E2E24163C1700CD43B0 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
