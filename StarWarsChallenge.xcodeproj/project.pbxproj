@@ -15,13 +15,13 @@
 		19AE9E022416038800CD43B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AE9E002416038800CD43B0 /* LaunchScreen.storyboard */; };
 		19AE9E0D2416038800CD43B0 /* StarWarsChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E0C2416038800CD43B0 /* StarWarsChallengeTests.swift */; };
 		19AE9E182416038800CD43B0 /* StarWarsChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E172416038800CD43B0 /* StarWarsChallengeUITests.swift */; };
-		19AE9E262416260B00CD43B0 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E252416260B00CD43B0 /* Film.swift */; };
 		19AE9E282416385600CD43B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E272416385600CD43B0 /* DetailViewController.swift */; };
 		19AE9E2A2416390500CD43B0 /* DetailTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E292416390500CD43B0 /* DetailTabController.swift */; };
 		19AE9E2C2416397700CD43B0 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E2B2416397700CD43B0 /* CharactersViewController.swift */; };
 		19AE9E2E24163C1700CD43B0 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E2D24163C1700CD43B0 /* Character.swift */; };
 		19AE9E312416431800CD43B0 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E2F2416431800CD43B0 /* DetailTableViewCell.swift */; };
 		19AE9E322416431800CD43B0 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19AE9E302416431800CD43B0 /* DetailTableViewCell.xib */; };
+		19AE9E37241DE56500CD43B0 /* FilmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE9E36241DE56500CD43B0 /* FilmObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +56,13 @@
 		19AE9E132416038800CD43B0 /* StarWarsChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19AE9E172416038800CD43B0 /* StarWarsChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsChallengeUITests.swift; sourceTree = "<group>"; };
 		19AE9E192416038800CD43B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19AE9E252416260B00CD43B0 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		19AE9E272416385600CD43B0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		19AE9E292416390500CD43B0 /* DetailTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTabController.swift; sourceTree = "<group>"; };
 		19AE9E2B2416397700CD43B0 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		19AE9E2D24163C1700CD43B0 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		19AE9E2F2416431800CD43B0 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		19AE9E302416431800CD43B0 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		19AE9E36241DE56500CD43B0 /* FilmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				19AE9E2D24163C1700CD43B0 /* Character.swift */,
-				19AE9E252416260B00CD43B0 /* Film.swift */,
+				19AE9E36241DE56500CD43B0 /* FilmObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -308,9 +308,9 @@
 				19AE9E312416431800CD43B0 /* DetailTableViewCell.swift in Sources */,
 				19AE9E2C2416397700CD43B0 /* CharactersViewController.swift in Sources */,
 				19AE9DFA2416038400CD43B0 /* StartViewController.swift in Sources */,
-				19AE9E262416260B00CD43B0 /* Film.swift in Sources */,
 				19AE9E282416385600CD43B0 /* DetailViewController.swift in Sources */,
 				19AE9DF62416038400CD43B0 /* AppDelegate.swift in Sources */,
+				19AE9E37241DE56500CD43B0 /* FilmObject.swift in Sources */,
 				19AE9E2A2416390500CD43B0 /* DetailTabController.swift in Sources */,
 				19AE9DF82416038400CD43B0 /* SceneDelegate.swift in Sources */,
 				19AE9E2E24163C1700CD43B0 /* Character.swift in Sources */,

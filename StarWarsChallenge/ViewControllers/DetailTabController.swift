@@ -10,13 +10,17 @@ import UIKit
 
 class DetailTabController: UITabBarController {
     
-    var film: Film? = nil
+    var film: FilmObject? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setupTabBarController()
+    }
+    
+    func setupTabBarController() {
         
         // Detail infos about film
         let detailVC = DetailViewController()
@@ -28,10 +32,8 @@ class DetailTabController: UITabBarController {
         let charactersVC = CharactersViewController()
         let charactersVCItem = UITabBarItem(title: "Characters", image: UIImage(named: "CharactersSymbol"), selectedImage: UIImage(named: "CharactersSymbol"))
         charactersVC.tabBarItem = charactersVCItem
-        charactersVC.title = "Characters"
         charactersVC.film = film
         
         viewControllers = [detailVC, charactersVC]
-        
     }
 }

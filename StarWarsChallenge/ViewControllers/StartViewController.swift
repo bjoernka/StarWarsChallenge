@@ -10,8 +10,10 @@ import UIKit
 
 class StartViewController: UITableViewController {
     
-    var allFilms: [Film] = []
+    var allFilms: [FilmObject] = []
     let filmURL = "https://swapi.co/api/films/"
+    let decoder = JSONDecoder()
+    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +39,7 @@ class StartViewController: UITableViewController {
         
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
-
+            
             if let data = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
@@ -45,25 +47,16 @@ class StartViewController: UITableViewController {
                         // Get all films
                         if let results = dictionary["results"] as? [[String: Any]] {
                             for result in results {
-                                let film = Film(title: result["title"] as! String,
-                                                episode_id: result["episode_id"] as! Int,
-                                                opening_crawl: result["opening_crawl"] as! String,
-                                                director: result["director"] as! String,
-                                                producer: result["producer"] as! String,
-                                                release_date: result["release_date"] as! String,
-                                                characters: result["characters"] as! [String],
-                                                planets: result["planets"] as! [String],
-                                                starships: result["starships"] as! [String],
-                                                vehicles: result["vehicles"] as! [String],
-                                                species: result["species"] as! [String],
-                                                created: result["created"] as! String,
-                                                edited: result["edited"] as! String,
-                                                url: result["url"] as! String)
+                                let jsonData = try JSONSerialization.data(withJSONObject: result, options: .prettyPrinted)
+                                let film = try self.decoder.decode(FilmObject.self, from: jsonData)
                                 self.allFilms.append(film)
                             }
                             // sort Array with newest release date at the beginning
+                            self.dateFormatter.dateFormat = "yyyy-MM-dd"
                             self.allFilms = self.allFilms.sorted(by: {
-                                $0.release_date.compare($1.release_date) == .orderedDescending
+                                let firstDate = self.dateFormatter.date(from: $0.release_date)
+                                let secondDate = self.dateFormatter.date(from: $1.release_date)
+                                return firstDate!.compare(secondDate!) == .orderedDescending
                             })
                         }
                     }
@@ -75,7 +68,6 @@ class StartViewController: UITableViewController {
             }
         }.resume()
         return
-        
     }
     
     // MARK: - Table view data source
@@ -115,7 +107,6 @@ class StartViewController: UITableViewController {
         tabBarVC.film = allFilms[indexPath.row]
         tabBarVC.title = allFilms[indexPath.row].title
         self.navigationController?.pushViewController(tabBarVC, animated: true)
-        
     }
     
 }

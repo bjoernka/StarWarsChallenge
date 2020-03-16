@@ -10,14 +10,19 @@ import UIKit
 
 class DetailViewController: UITableViewController {
 
-    var film: Film? = nil
+    var film: FilmObject? = nil
     var criterias = ["Title:", "Director:", "Producer:", "Release date:", "Url:"]
+    var values : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        values = [film!.title, film!.director, film!.producer, film!.release_date, film!.url]
 
         // remove unnecessary rows
         self.tableView.tableFooterView = UIView()
+        
+        tableView.register(UINib(nibName: "DetailTableViewCell", bundle: nil), forCellReuseIdentifier: "DetailTableViewCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,32 +44,12 @@ class DetailViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-        let detailCell = Bundle.main.loadNibNamed("DetailTableViewCell", owner: self, options: nil)?.first as! DetailTableViewCell
+
+        let detailCell = tableView.dequeueReusableCell(withIdentifier: "DetailTableViewCell", for: indexPath) as! DetailTableViewCell
         
         if film != nil {
-            switch indexPath.row {
-            case 0:
-                detailCell.criteriaLabel.text = criterias[indexPath.row]
-                detailCell.valueLabel.text = film!.title
-            case 1:
-                detailCell.criteriaLabel.text = criterias[indexPath.row]
-                detailCell.valueLabel.text = film!.director
-            case 2:
-                detailCell.criteriaLabel.text = criterias[indexPath.row]
-                detailCell.valueLabel.text = film!.producer
-            case 3:
-                detailCell.criteriaLabel.text = criterias[indexPath.row]
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd"
-                detailCell.valueLabel.text = dateFormatter.string(from: film!.release_date)
-            case 4:
-                detailCell.criteriaLabel.text = criterias[indexPath.row]
-                detailCell.valueLabel.text = film!.url
-            default:
-                detailCell.criteriaLabel.text = "criteria"
-                detailCell.valueLabel.text = "value"
-            }
+            detailCell.criteriaLabel.text = criterias[indexPath.row]
+            detailCell.valueLabel.text = values[indexPath.row]
         } else {
             detailCell.criteriaLabel.text = "No values"
         }

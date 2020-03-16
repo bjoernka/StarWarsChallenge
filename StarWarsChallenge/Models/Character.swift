@@ -9,13 +9,9 @@
 import Foundation
 
 // represents a Character in a film
-struct Character {
+struct Character: Codable {
     
     // only "name" is necessary for the tableView - struct can be extended with other values if necessary
-    var name: String = ""
-    
-    init(name: String) {
-        self.name = name
-    }
+    var name: String
     
 }

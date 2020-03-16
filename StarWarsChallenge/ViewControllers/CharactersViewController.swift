@@ -11,7 +11,7 @@ import UIKit
 class CharactersViewController: UITableViewController {
 
     var allCharacters: [Character] = []
-    var film: Film? = nil
+    var film: FilmObject? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
